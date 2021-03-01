@@ -37,7 +37,7 @@
 	</bean>
     
     <alias name="defaultDemoextCustomerPopulator" alias="demoextCustomerPopulator"/>
-	<bean id="defaultOccaddonCustomerPopulator" class="de.hybris.platform.demoext.customer.converters.populator.DemoExtCustomerPopulator">
+	<bean id="defaultDemoextCustomerPopulator" class="de.hybris.platform.demoext.customer.converters.populator.DemoExtCustomerPopulator">
 		<property name="addressConverter" ref="addressConverter"/>
 	</bean>
 
