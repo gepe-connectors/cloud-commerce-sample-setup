@@ -15,16 +15,12 @@
 	<bean id="defaultDemoextCacheManager" class="org.springframework.cache.ehcache.EhCacheCacheManager">
 		<property name="cacheManager" ref="demoextEhcache"/>
 	</bean>
-    
-    <alias name="defaultDemoextCacheManager" alias="demoextCacheManager"/>
 
 	
 	<bean id="defaultDemoextEhcache" class="de.hybris.platform.webservicescommons.cache.TenantAwareEhCacheManagerFactoryBean">
 		<property name="cacheNamePrefix" value="demoextCache_"/>
 		<property name="configLocation" value="/WEB-INF/cache/addons/demoext/ehcache.xml"/>
 	</bean>
-    
-    <alias name="defaultDemoextEhcache" alias="demoextEhcache"/>
 
 	<bean depends-on="wsCacheManagerList" parent="listMergeDirective">
 		<property name="add" ref="demoextCacheManager"/>
