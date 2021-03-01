@@ -35,5 +35,15 @@
 	<bean id="demoextSampleDataEventListener" parent="abstractGenericAddOnSampleDataEventListener"  >
 		<property name="extensionName" value="demoext" />
 	</bean>
+    
+    <alias name="defaultDemoextCustomerPopulator" alias="demoextCustomerPopulator"/>
+	<bean id="defaultOccaddonCustomerPopulator" class="de.hybris.platform.demoext.customer.converters.populator.DemoExtCustomerPopulator">
+		<property name="addressConverter" ref="addressConverter"/>
+	</bean>
+
+	<bean parent="modifyPopulatorList">
+    		<property name="list" ref="customerConverter"/>
+    		<property name="add" ref="demoextCustomerPopulator"/>
+	</bean>
 
 </beans>
