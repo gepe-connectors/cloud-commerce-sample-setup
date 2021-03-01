@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
- Copyright (c) 2020 SAP SE or an SAP affiliate company. All rights reserved.
--->
+
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
@@ -12,18 +10,21 @@
            
     <context:component-scan base-package="org.training.controllers"/>
 
-	<!-- Cache manager for addon -->
 
-	<alias name="defaultDemoextCacheManager" alias="demoextCacheManager"/>
+	
 	<bean id="defaultDemoextCacheManager" class="org.springframework.cache.ehcache.EhCacheCacheManager">
 		<property name="cacheManager" ref="demoextEhcache"/>
 	</bean>
+    
+    <alias name="defaultDemoextCacheManager" alias="demoextCacheManager"/>
 
-	<alias name="defaultDemoextEhcache" alias="demoextEhcache"/>
+	
 	<bean id="defaultDemoextEhcache" class="de.hybris.platform.webservicescommons.cache.TenantAwareEhCacheManagerFactoryBean">
 		<property name="cacheNamePrefix" value="demoextCache_"/>
 		<property name="configLocation" value="/WEB-INF/cache/addons/demoext/ehcache.xml"/>
 	</bean>
+    
+    <alias name="defaultDemoextEhcache" alias="demoextEhcache"/>
 
 	<bean depends-on="wsCacheManagerList" parent="listMergeDirective">
 		<property name="add" ref="demoextCacheManager"/>
