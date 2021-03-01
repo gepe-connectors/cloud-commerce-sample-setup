@@ -13,9 +13,9 @@
 		<property name="workOfficeAddress" type="de.hybris.platform.commercefacades.user.data.AddressData"/>	
 	</bean>
 	
-	<alias name="demoextCustomerPopulator" alias="demoextCustomerPopulator"/>
-	<bean id="demoextCustomerPopulator" class="de.hybris.platform.occaddon.customer.converters.populator.DemoextCustomerPopulator">
+	<bean class="de.hybris.platform.occaddon.customer.converters.populator.DemoextCustomerPopulator">
 		<property name="addressConverter" ref="addressConverter"/>
+        <!--<alias name="demoextCustomerPopulator" alias="demoextCustomerPopulator"/>-->
 	</bean>
 
 	<bean parent="modifyPopulatorList">
