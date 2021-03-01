@@ -1,0 +1,17 @@
+# ---------------------------------------------------------------------------
+# Copyright (c) 2020 SAP SE or an SAP affiliate company. All rights reserved.
+# ---------------------------------------------------------------------------
+# you can put key/value pairs here.
+# Use Config.getParameter(..) to retrieve the values during runtime.
+
+demoext.key=value
+
+# Specifies the location of the spring context file added automatically to the global platform application context.
+demoext.application-context=demoext-spring.xml
+
+# Specifies the location of the spring context file which will be added to commerce web services web context
+ycommercewebservices.additionalWebSpringConfigs.demoext=classpath:/demoext/web/spring/demoext-web-spring.xml
+
+#Use for generating static swagger documentation
+demoext.documentation.static.generate=true
+ext.demoext.extension.webmodule.webroot=/rest/v2
