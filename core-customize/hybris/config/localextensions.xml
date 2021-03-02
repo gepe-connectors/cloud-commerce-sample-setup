@@ -31,6 +31,7 @@
 	  <extension name= 'smarteditwebservices' />
 	  <extension name= 'cmssmarteditwebservices' />
 	  <extension name= 'permissionswebservices' />
+      <extension name="b2boccaddon" />
 	  <extension name= 'ycommercewebservices' />
 	  <extension name= 'ycommercewebservicestest' />
 	  <extension name= 'smarteditaddon' />
