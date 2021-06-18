@@ -35,5 +35,15 @@
 	<bean id="sagdemoSampleDataEventListener" parent="abstractGenericAddOnSampleDataEventListener"  >
 		<property name="extensionName" value="sagdemo" />
 	</bean>
+	
+	<alias name="defaultSagdemoCustomerPopulator" alias="sagdemoCustomerPopulator"/>
+	<bean id="defaultSagdemoCustomerPopulator" class="de.hybris.platform.sagdemo.customer.converters.populator.SagdemoCustomerPopulator">
+		<property name="addressConverter" ref="addressConverter"/>
+	</bean>
+
+	<bean parent="modifyPopulatorList">
+    		<property name="list" ref="customerConverter"/>
+    		<property name="add" ref="sagdemoCustomerPopulator"/>
+	</bean>
 
 </beans>

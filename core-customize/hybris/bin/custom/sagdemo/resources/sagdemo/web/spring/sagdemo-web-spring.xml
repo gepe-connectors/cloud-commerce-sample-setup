@@ -28,5 +28,17 @@
 	<bean depends-on="wsCacheManagerList" parent="listMergeDirective">
 		<property name="add" ref="sagdemoCacheManager"/>
 	</bean>
+	
+	<bean parent="fieldSetLevelMapping">
+        <property name="dtoClass"
+            value="de.hybris.platform.commercewebservicescommons.dto.user.UserWsDTO" />
+        <property name="levelMapping">
+            <map>
+                <entry key="BASIC" value="nickname" />
+                <entry key="DEFAULT" value="nickname" />
+                <entry key="FULL" value="nickname,workOfficeAddress(FULL)" />
+            </map>
+        </property>
+    </bean>
 
 </beans>
