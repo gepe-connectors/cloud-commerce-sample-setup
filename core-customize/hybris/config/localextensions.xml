@@ -96,6 +96,15 @@
 	  <extension name= 'orbeonweb' />
 
 
+<!-- Required for adding custom extensions -->
+	  <extension name='addonsupport' />
+      <extension name='yoccaddon'/>
+	  
+<!-- Required for adding custom extensions -->
+	  <extension name="sagdemo" />
+
+	  
+	  
 <!-- Sample Custom Extensions -->
     <extension name='kiwi' />
     <extension name='tiger'/>

@@ -1,0 +1,17 @@
+# ---------------------------------------------------------------------------
+# Copyright (c) 2020 SAP SE or an SAP affiliate company. All rights reserved.
+# ---------------------------------------------------------------------------
+# you can put key/value pairs here.
+# Use Config.getParameter(..) to retrieve the values during runtime.
+
+sagdemo.key=value
+
+# Specifies the location of the spring context file added automatically to the global platform application context.
+sagdemo.application-context=sagdemo-spring.xml
+
+# Specifies the location of the spring context file which will be added to commerce web services web context
+ycommercewebservices.additionalWebSpringConfigs.sagdemo=classpath:/sagdemo/web/spring/sagdemo-web-spring.xml
+
+#Use for generating static swagger documentation
+sagdemo.documentation.static.generate=true
+ext.sagdemo.extension.webmodule.webroot=/rest/v2
