@@ -3,7 +3,15 @@
  */
 package org.training.controllers;
 
-public class TrainingController
+@Controller("testController")
+@RequestMapping(value = "/{baseSiteId}/test")
+public class TrainingController 
 {
-	// implement the controller here
+	
+	@RequestMapping(value = "/resource", method = RequestMethod.GET)
+	@ResponseBody
+	public String getTestResource() {
+		return "Hello! This is a test resource output";
+	}
+
 }
