@@ -14,15 +14,15 @@ import org.junit.Test;
 
 
 /**
- * JUnit Tests for the Training extension
+ * JUnit Tests for the Sagocc extension
  */
-public class TrainingTest extends HybrisJUnit4TransactionalTest
+public class SagoccTest extends HybrisJUnit4TransactionalTest
 {
 	/**
 	 * Edit the local|project.properties to change logging behaviour (properties log4j.*).
 	 */
 	@SuppressWarnings("unused")
-	private static final Logger LOG = Logger.getLogger(TrainingTest.class.getName());
+	private static final Logger LOG = Logger.getLogger(SagoccTest.class.getName());
 
 	@Before
 	public void setUp()
@@ -40,7 +40,7 @@ public class TrainingTest extends HybrisJUnit4TransactionalTest
 	 * This is a sample test method.
 	 */
 	@Test
-	public void testTraining()
+	public void testSagocc()
 	{
 		final boolean testTrue = true;
 		assertTrue("true is not true", testTrue);

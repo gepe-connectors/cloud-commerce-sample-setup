@@ -5,7 +5,7 @@ package org.training.controllers;
 
 @Controller("testController")
 @RequestMapping(value = "/{baseSiteId}/test")
-public class TrainingController 
+public class SagoccController 
 {
 	
 	@RequestMapping(value = "/resource", method = RequestMethod.GET)

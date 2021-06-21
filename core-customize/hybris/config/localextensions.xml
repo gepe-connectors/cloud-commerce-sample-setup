@@ -101,7 +101,7 @@
       <extension name='yoccaddon'/>
 	  
 <!-- Required for adding custom extensions -->
-	  <extension name="sagdemo" />
+	  <extension name="sagocc" />
 
 	  
 	  
