@@ -100,8 +100,9 @@
 	  <extension name='addonsupport' />
       <extension name='yoccaddon'/>
 	  
-<!-- Required for adding custom extensions -->
+<!-- My custom extensions -->
 	  <extension name="sagocc" />
+	  <extension name="sagoccaddon" />
 
 	  
 	  
