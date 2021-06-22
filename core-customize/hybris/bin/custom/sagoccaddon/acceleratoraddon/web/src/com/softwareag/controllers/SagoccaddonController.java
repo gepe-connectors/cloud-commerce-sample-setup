@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2020 SAP SE or an SAP affiliate company. All rights reserved.
  */
-package org.training.controllers;
+package com.softwareag.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
