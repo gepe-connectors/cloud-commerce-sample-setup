@@ -130,6 +130,11 @@
 		  "storefront":"ycommercewebservices",
 		  "template":"ycommercewebservices"
 	   },
+	   {
+		   "addon":"sagoccaddon",
+		   "storefront":"ycommercewebservices",
+		   "template":"ycommercewebservices"
+	   },
 	   { 
 		  "addon":"ordermanagementaddon",
 		  "storefront":"yacceleratorstorefront",
