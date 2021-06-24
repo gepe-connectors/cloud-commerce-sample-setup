@@ -16,5 +16,17 @@
 		<property name="flag" type="boolean"/>
 	</bean>
 	-->
+	
+	<bean class="de.hybris.platform.commercefacades.user.data.CustomerData" extends="de.hybris.platform.commercefacades.user.data.PrincipalData">
+		<property name="nickname" type="String" />
+		<property name="workOfficeAddress" type="de.hybris.platform.commercefacades.user.data.AddressData"/>	
+	</bean>
+	
+	<!-- Additional nickname and workofficeAddress property for UserWsDTO -->
+    <bean class="de.hybris.platform.commercewebservicescommons.dto.user.UserWsDTO"
+          extends="de.hybris.platform.commercewebservicescommons.dto.user.PrincipalWsDTO">
+        <property name="nickname" type="String" />
+        <property name="workOfficeAddress" type="de.hybris.platform.commercewebservicescommons.dto.user.AddressWsDTO"/>    
+    </bean>
 
 </beans>

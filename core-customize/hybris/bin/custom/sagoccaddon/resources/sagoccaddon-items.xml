@@ -36,5 +36,21 @@
 			</attributes>
 		</itemtype>
 -->
+	<typegroup name="Customer">	
+			<itemtype code="Customer" autocreate="false" generate="false">
+				<description>Extending Customer type with additional attributes.</description>
+				<attributes>
+					<attribute autocreate="true" qualifier="nickname" type="java.lang.String">
+						<modifiers read="true" write="true" optional="true" />
+						<persistence type="property" />
+						<description>Customer nickname</description>
+					</attribute>
+		            <attribute autocreate="true" qualifier="workOfficeAddress" type="Address" isSelectionOf="addresses">
+               		   <modifiers read="true" write="true" search="false" optional="true" />
+        		       <persistence type="property" qualifier="WorkOfficeAddress"/>
+            		</attribute>					
+				</attributes>
+			</itemtype>
+		</typegroup>
 	</itemtypes>
 </items>
