@@ -48,7 +48,13 @@
 		            <attribute autocreate="true" qualifier="workOfficeAddress" type="Address" isSelectionOf="addresses">
                		   <modifiers read="true" write="true" search="false" optional="true" />
         		       <persistence type="property" qualifier="WorkOfficeAddress"/>
-            		</attribute>					
+            		</attribute>
+					<attribute autocreate="true" qualifier="lastName" type="java.lang.Boolean">
+						<modifiers read="true" write="true" optional="true" />
+						<persistence type="property" />
+						<description>This should be a boolean now</description>
+					</attribute>
+
 				</attributes>
 			</itemtype>
 		</typegroup>
