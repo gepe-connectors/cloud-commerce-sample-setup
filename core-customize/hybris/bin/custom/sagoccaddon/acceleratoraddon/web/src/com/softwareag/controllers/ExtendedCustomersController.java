@@ -28,7 +28,7 @@ public class ExtendedCustomersController
 	@ResponseBody		
 	public String getCustomerNickname()
 	{
-		final String name = getCustomerFacade().getCurrentCustomer().getNickname();
+		final String name = customerFacade.getCurrentCustomer().getNickname();
 		return name;
 	}
 
@@ -37,7 +37,6 @@ public class ExtendedCustomersController
 	@ResponseBody
 	public CustomerData setCustomerNickname(@RequestParam final String nickname) throws DuplicateUidException
 	{
-		CustomerFacade customerFacade = getCustomerFacade();
 		final CustomerData customer = customerFacade.getCurrentCustomer();
 		customer.setNickname(nickname);
 		customerFacade.updateFullProfile(customer);
