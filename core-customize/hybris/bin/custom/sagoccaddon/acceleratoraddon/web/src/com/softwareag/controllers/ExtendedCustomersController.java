@@ -11,6 +11,8 @@ import de.hybris.platform.commercefacades.user.data.CustomerData;
 import de.hybris.platform.commercefacades.customer.CustomerFacade;
 import org.springframework.security.access.annotation.Secured;
 
+import javax.annotation.Resource;
+
 /**
  * Controller which extends Customer Resources
  */
@@ -18,16 +20,8 @@ import org.springframework.security.access.annotation.Secured;
 @RequestMapping(value = "/{baseSiteId}/customers")
 public class ExtendedCustomersController 
 {
+	@Resource(name = "customerFacade")
 	private CustomerFacade customerFacade;
-	
-	public CustomerFacade getCustomerFacade() {
-		return customerFacade;
-	}
-	
-	public void setCustomerFacade(CustomerFacade customerFacade)
-	{
-		this.customerFacade = customerFacade;
-	}
 
 	@Secured("ROLE_CUSTOMERGROUP")
 	@RequestMapping(value = "/current/nickname", method = RequestMethod.GET)
