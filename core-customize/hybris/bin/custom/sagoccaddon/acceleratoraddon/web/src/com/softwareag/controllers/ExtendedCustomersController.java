@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import de.hybris.platform.commerceservices.customer.DuplicateUidException;
 import de.hybris.platform.commercefacades.user.data.CustomerData;
 import de.hybris.platform.commercefacades.customer.CustomerFacade;
+import org.springframework.security.access.annotation.Secured;
 
 /**
  * Controller which extends Customer Resources
@@ -15,6 +16,11 @@ import de.hybris.platform.commercefacades.customer.CustomerFacade;
 @RequestMapping(value = "/{baseSiteId}/customers")
 public class ExtendedCustomersController 
 {
+	private CustomerFacade customerFacade;
+	
+	protected CustomerFacade getCustomerFacade() {
+		return customerFacade;
+	}
 
 	@Secured("ROLE_CUSTOMERGROUP")
 	@RequestMapping(value = "/current/nickname", method = RequestMethod.GET)
