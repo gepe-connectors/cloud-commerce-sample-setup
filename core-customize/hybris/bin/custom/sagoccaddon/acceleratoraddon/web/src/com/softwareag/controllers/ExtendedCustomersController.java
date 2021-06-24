@@ -20,8 +20,13 @@ public class ExtendedCustomersController
 {
 	private CustomerFacade customerFacade;
 	
-	protected CustomerFacade getCustomerFacade() {
+	public CustomerFacade getCustomerFacade() {
 		return customerFacade;
+	}
+	
+	public void setCustomerFacade(CustomerFacade customerFacade)
+	{
+		this.customerFacade = customerFacade;
 	}
 
 	@Secured("ROLE_CUSTOMERGROUP")
