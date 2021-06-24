@@ -12,7 +12,7 @@ import de.hybris.platform.commercefacades.customer.CustomerFacade;
 import org.springframework.security.access.annotation.Secured;
 
 import de.hybris.platform.commercewebservicescommons.dto.user.UserWsDTO;
-import de.hybris.platform.commercewebservicescommons.mapping.DataMapper;
+import de.hybris.platform.webservicescommons.mapping.DataMapper;
 
 import javax.annotation.Resource;
 
