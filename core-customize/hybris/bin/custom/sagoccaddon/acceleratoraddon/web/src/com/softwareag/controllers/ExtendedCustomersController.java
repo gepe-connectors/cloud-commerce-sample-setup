@@ -11,6 +11,8 @@ import de.hybris.platform.commercefacades.user.data.CustomerData;
 import de.hybris.platform.commercefacades.customer.CustomerFacade;
 import org.springframework.security.access.annotation.Secured;
 
+import de.hybris.platform.commercewebservicescommons.dto.user.UserWsDTO;
+
 import javax.annotation.Resource;
 
 /**
@@ -22,6 +24,9 @@ public class ExtendedCustomersController
 {
 	@Resource(name = "customerFacade")
 	private CustomerFacade customerFacade;
+	
+	@Resource(name = "dataMapper")
+    protected DataMapper dataMapper;
 
 	@Secured("ROLE_CUSTOMERGROUP")
 	@RequestMapping(value = "/current/nickname", method = RequestMethod.GET)
@@ -35,12 +40,16 @@ public class ExtendedCustomersController
 	@Secured("ROLE_CUSTOMERGROUP")
 	@RequestMapping(value = "/current/nickname", method = RequestMethod.PUT)
 	@ResponseBody
-	public CustomerData setCustomerNickname(@RequestParam final String nickname) throws DuplicateUidException
+	public UserWsDTO setCustomerNickname(@RequestParam final String nickname) throws DuplicateUidException
 	{
 		final CustomerData customer = customerFacade.getCurrentCustomer();
 		customer.setNickname(nickname);
 		customerFacade.updateFullProfile(customer);
-		return customerFacade.getCurrentCustomer();
+		CustomerData customerData = customerFacade.getCurrentCustomer();
+		final UserWsDTO dto = dataMapper.map(customerData, UserWsDTO.class, fields);
+        return dto;
 	}
+	
+	
 
 }
